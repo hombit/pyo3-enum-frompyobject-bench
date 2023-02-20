@@ -1,0 +1,18 @@
+[package]
+name = "pyo3-enum-frompyobject-bench"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bench]]
+name = "pyo3-enum-frompyobject-bench"
+path = "benches/lib.rs"
+harness = false
+
+[dependencies]
+numpy = "0.18"
+pyo3 = {version = "0.18", features = ["auto-initialize"]}
+
+[dev-dependencies]
+criterion = "0.4"
